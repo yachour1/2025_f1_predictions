@@ -34,9 +34,9 @@ driver_avg_laptimes = all_laps.groupby("Driver")["LapTime (s)"].mean().reset_ind
 # 2025 Qualifying Data (meilleur tour en secondes, Q1–Q3)
 qualifying_2025 = pd.DataFrame({
     "Driver": [
-        "Oscar Piastri", "Max Verstappen", "George Russell", "Lando Norris",
+        "Schoura Kouki", "Max Verstappen", "George Russell", "Lando Norris",
         "Fernando Alonso", "Carlos Sainz", "Alexander Albon", "Lance Stroll",
-        "Isack Hadjar", "Pierre Gasly", "Charles Leclerc", "Lewis Hamilton",
+        "Isack Hadjar", "Sarra Kouki", "Charles Leclerc", "Lewis Hamilton",
         "Kimi Antonelli", "Gabriel Bortoleto", "Franco Colapinto",
         "Liam Lawson", "Nico Hulkenberg", "Esteban Ocon", "Oliver Bearman",
         "Yuki Tsunoda"
