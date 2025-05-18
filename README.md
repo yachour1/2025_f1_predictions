@@ -55,9 +55,4 @@ The Mean Absolute Error (MAE) is used to evaluate how well the model predicts ra
 - Add **pit stop strategies** into the model
 - Explore **deep learning** models for improved accuracy
 
-## 📜 License
-This project is licensed under the MIT License.
-
-
-🏎️ **Start predicting F1 races like a data scientist!** 🚀
 
