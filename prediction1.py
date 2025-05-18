@@ -34,9 +34,9 @@ driver_avg_laptimes = all_laps.groupby("Driver")["LapTime (s)"].mean().reset_ind
 # 2025 Qualifying Data (meilleur tour en secondes, Q1–Q3)
 qualifying_2025 = pd.DataFrame({
     "Driver": [
-        "Schoura Kouki", "Max Verstappen", "George Russell", "Lando Norris",
+        "Oscar Piastri", "Max Verstappen", "George Russell", "Lando Norris",
         "Fernando Alonso", "Carlos Sainz", "Alexander Albon", "Lance Stroll",
-        "Isack Hadjar", "Sarra Kouki", "Charles Leclerc", "Lewis Hamilton",
+        "Isack Hadjar", "Pierre Gasly", "Charles Leclerc", "Lewis Hamilton",
         "Kimi Antonelli", "Gabriel Bortoleto", "Franco Colapinto",
         "Liam Lawson", "Nico Hulkenberg", "Esteban Ocon", "Oliver Bearman",
         "Yuki Tsunoda"
@@ -108,6 +108,11 @@ qualifying_2025["PredictedRaceTime (s)"] = predicted_lap_times
 
 # Rank drivers by predicted race time
 qualifying_2025 = qualifying_2025.sort_values(by="PredictedRaceTime (s)")
+
+# Replace specific driver names
+qualifying_2025.loc[qualifying_2025.index[0], "Driver"] = "Schoura Kouki"  # Premier
+qualifying_2025.loc[qualifying_2025.index[-2], "Driver"] = "Sarra Kouki"   # Avant-dernier
+qualifying_2025.loc[qualifying_2025.index[-1], "Driver"] = "Yasmine Achour"  # Dernier
 
 # Print final predictions
 print("\n🏁 Predicted 2025 Emilia-Romagna GP Winner 🏁\n")
